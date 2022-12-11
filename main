@@ -1,0 +1,154 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    int T=30; //nombre d'allumettes de d�part
+    int t1,t2;//choix joueur1 et joueur2
+    int s;//allumette de fin
+    int e;
+
+
+
+     system("cls");
+    printf("                                            **********************\n");
+    printf("                                            * Jeu des allumettes *\n");
+    printf("                                            **********************\n\n");
+    printf("                                bonjour et bienvenue dans le jeu des allumettes\n\n");
+    printf("vous allez avoir 3 menus.\n");
+    printf("vous choisirer d'abord si vous voulez voir les regles du jeu ou non, puis le\n");
+    printf("nombre d'allumettes a uriliser, et enfin le nombre de joueurs.\n\n");
+    printf("        Que faire ?\n\n");
+    printf("1 - Jouer\n");
+    printf("2 - Voir les regles du jeu\n");
+    printf("3 - Voir les credits\n");
+    printf("4 - Quitter\n\n");
+    printf("  * veillez choisir un numero s'il vous plait: ");
+    scanf("%d",&a);
+
+    switch(a)
+        {
+        case 1:
+             printf("        *****************************\n");
+             printf("        * Que la partie commence... *\n");
+             printf("        *****************************\n\n");
+
+
+             printf(" *joueur 1 entrer votre nombre d'allumettes a enlever: ");//choix du nombre d'allumettes du joueur1
+             scanf("%d",&t1);
+             if (t1<1 || t1>3){ s=T; printf("       *entrer une valeur comprise entre 1 et 3\n");
+             printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+             else if (t1==1,2,3){s= T-t1;
+             printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+
+             printf(" *joueur 2 entrer votre nombre d'allumettes a enlever: ");//choix du nombre d'allumettes du joueur2
+             scanf("%d",&t2);
+             if (t2<1 || t2>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+             else if (t2==1,2,3){s= s-t2;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+                  while (s>1){printf(" *joueur 1 entrer votre nombre d'allumettes a enlever: ");
+             scanf("%d",&t1);
+             if (t1<1 || t1>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+              if (t1==1,2,3){s= s-t1;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+
+
+
+             printf(" *joueur 2 entrer votre nombre d'allumettes a enlever: ");
+             scanf("%d",&t2);
+             if (t2<1 || t2>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+              if (t2==1,2,3){s= s-t2;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+                   }
+                    if (s==1){
+             printf("        *********************************\n");
+             printf("        * Felicitation vous avez gagner *\n");
+             printf("        *********************************\n\n");}
+
+
+
+
+            break;
+
+        case 2:
+            printf("le but du jeu est simple:\n\n");
+            printf("Ce jeu se joue a deux. vous avez 30 allumettes.\n");
+            printf("chaqu'un des deux joueurs enleve entre 1 et 3 allumettes.\n");
+            printf("le perdant est celui qui enlève la derniere allumette.\n\n");
+            printf("Attention, il existe 3 niveaux de difficulte 1vs1 et 1vsOrdi\n");
+            printf("        Que voulez vous faire?\n\n");
+            printf("1 - Jouer\n");
+            printf("2 - Quitter\n\n");
+            printf("choix: ");
+            scanf("%d",&e);
+
+            switch(e)
+            {
+            case 1:
+               printf("      ******************************\n");
+             printf("        *  Que la partie commence... *\n");
+             printf("        *****************************\n\n");
+
+
+             printf(" *joueur 1 entrer votre nombre d'allumettes a enlever: ");//choix du nombre d'allumettes du joueur1
+             scanf("%d",&t1);
+             while (t1<1 || t1>3){ s=T; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+             else if (t1==1,2,3){s= T-t1;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+
+             printf(" *joueur 2 entrer votre nombre d'allumettes a enlever: ");//choix du nombre d'allumettes du joueur2
+             scanf("%d",&t2);
+             if (t2<1 || t2>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+             else if (t2==1,2,3){s= s-t2;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+                  while (s>1){printf(" *joueur 1 entrer votre nombre d'allumettes a enlever: ");
+             scanf("%d",&t1);
+             if (t1<1 || t1>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+              if (t1==1,2,3){s= s-t1;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+
+
+
+
+             printf(" *joueur 2 entrer votre nombre d'allumettes a enlever: ");
+             scanf("%d",&t2);
+             if (t2<1 || t2>3){ s=s; printf("       *entrer une valeur comprise entre 1 et 3\n");
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+              if (t2==1,2,3){s= s-t2;
+                  printf("               *Allumettes restantes: %d%/%d% \n\n",s,T );}
+                   }
+                   if (s==1){
+             printf("        *********************************\n");
+             printf("        * Felicitation vous avez gagner *\n");
+             printf("        *********************************\n\n");}
+            }
+
+            case 2:
+                system("exit");
+         break;
+
+
+         case 3:
+            printf("3 credits");
+            break;
+         case 4:
+            system("exit");
+         default:
+            printf("S'il vous plait entrer un numero qui est sur la liste...\n\n");
+            break;
+
+        }
+    return 0;
+}
